@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+            
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+        
+        #about {
+            padding: 50px 0;
+            overflow: hidden; 
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            width: 75%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+
+        .about-container img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px; 
+            box-shadow: 0 0 10px rgb(53, 75, 75);
+            
+        }
+
+        .about-text {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            
+            box-shadow: 0 0 10px rgb(53, 75, 75);
+            margin-left: 20px; 
+        }
+
+        .contact-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: black;
+            font-size: 24px;
+        }
+
+        footer {
+            
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+        }
+
+        footer p h3{
+            color: black;
+        }
+
+        footer i {
+            margin: 0 10px;
+        }
+        .about-text{
+            width: 100%;
+            color: #fff;
+            margin-top: 10px;
+            border-radius: 8px;
+            margin-left: 6%;
+            margin-right: 8%;
+            padding: 0.5rem 1rem 1.5rem 1rem;
+            background: transparent;
+        }
+        
+        .about-container img{
+                margin-left: 10%;
+                border-radius:15px;
+                
+                
+        }
+        .about-container{
+            width: 100%;
+            padding: 1rem;
+        }
+        .header {
+            background-color: #010101;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .logo span {
+            color: #2d2d2d;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .nav-icons {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4d97bc;
+        }
+        .cert-top {
+            padding: 0 0 100px 0;
+        }
+
+        #certifications {
+            
+            padding: 50px 0;
+        }
+
+        .certifications-container {
+            width: 95%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #114f6e; /* Cyan shadow effect */
+        }
+        
+
+        .certifications-title {
+            display: flex;
+            margin-left: 40% ;
+            align-items: center; /* Align vertically */
+            margin-bottom: 30px;
+            color: #FFF;
+            text-shadow: 2px 2px 4px #114a6e;
+        }
+
+        .certifications-title img {
+            margin-right: 10px; /* Add some spacing between the icon and text */
+        }
+
+        
+        .certificates {
+            height: auto;
+            padding: 0 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .certificates img {
+
+            border-radius: 8px;
+            margin-bottom: 15px;
+            width: 100px;
+            height: 60px;
+        }
+
+        .certificates-box {
+            
+            margin-right: 80px;
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgb(177, 177, 177), 2px 2px 5px rgb(177, 177, 177);
+            transition: 0.3s ease-in-out;
+            height: 110px;
+            width: 110px;
+        }
+
+        .certificates-box:hover {
+            box-shadow: 0px 5px 15px #0c586b;
+            cursor: pointer;
+        }
+
+        .certificates-box h2 {
+            font-size: 18px;
+            color: rgb(4, 81, 113);
+            margin: 5px 0;
+        }
+
+        .certificates-box p {
+            color: rgb(99, 99, 99);
+            margin: 5px 0;
+            
+
+        }
+        .content img{
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            margin-top: 5px;
+        }
+
+        .a{
+            background-color: #344a72;
+            padding-bottom: 25px;
+            padding-top: 25px;
+            margin-top: 10px;
+        }
+        .btn {
+            background-color: rgba(0, 255, 255, 0.5);
+            padding: 5px 7px;
+            border-radius: 30px;
+            color: white;
+            transition: 0.4s ease-in-out;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: rgb(159, 208, 248);
+            color: black;
+        }
+        .contact-title {
+            margin-bottom: 20px;
+            color: black;
+            
+            
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            header {
+                padding: 5px;
+                width: 100%;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .nav-icons {
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                margin: 2px 6px;
+            }
+            .about-container {
+                
+                flex-direction: column;
+                
+                
+            }
+            
+            .about-text {
+                font-size: 2px;
+                flex-direction: column;
+                width: 100%;
+                font-size: x-small;
+                margin-left: 10px;
+                
+            }
+
+            .about-container img {
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+            .about-text {
+                margin: 0;
+            }
+
+            .certifications-container {
+                display: none; /* Hide the certifications section */
+            }
+            #nn{
+                display: none;
+            }
+        }
+
+
+        
+        body {
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        #n{
+            color: #000;
+        }
+
+    </style>
+</head>
+<body width="100">
+    <div class="header">
+        <div class="logo">Poornima Gottimukkala<span></span></div>
+        <div class="nav-links">
+            
+            <div class="nav-icons">
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="https://drive.google.com/file/d/1WRhGWwc6NFPCmmxyYx8VT3-JNnwhTlGb/view">My Projects</a>
+                <a href="resume.png">Resume</a>
+                <a href="#certifications" id="nn">My Certifications</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <section id="about">
+        <div class="about-container">
+            <img src ="Photo1.jpg" width="200px" heigh="200px">
+            
+            <div class="about-text">
+                <h2>Hello there!</h2>
+                <p> Seeking a responsible career opportunity in the field of
+                    Computer Science where I can utilize my logical and
+                    technical skills towards personal and professional development
+                    .<br>Beyond coding, I'm a firm believer in teamwork and collaboration.
+                     I thrive in environments where diverse minds come together to solve complex problems. 
+                     I've had the opportunity to work on a variety of projects, both independently and as part of a team, 
+                     allowing me to develop not only my technical skills but also my communication and leadership abilities.</p>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </section>
+    <section id="certifications">
+        <div class="certifications-container">
+            
+            <h2 class="certifications-title"><img src="badge.png" width="40px" height="40px" alt="badge">Certifications </h2>
+            <div class="certificates">
+                <div class="cert-top" id="courses">
+        
+                    <section class="certificates">
+                        <div class="certificates-box">
+                            <h2>Full Stack Web Development </h2>
+                            <a href="20WH1A05F6_Full stack web dev.jpg" class="btn started course">View</a>
+                        </div>
+        
+                        <div class="certificates-box">
+                            <h2>Learning MYSQL Programming-Linkedin</h2>
+                            <a href="20WH1A05F6_MYSQL LINKEDIN.jpeg" class="btn started course">View</a>
+        
+                        </div>
+                        <div class="certificates-box">
+                            <h2>&nbsp;&nbsp;Python essential training -Linkedin</h2>
+                            <a href="python.png" class="btn started course">View</a>
+                        </div>
+                        <div class="certificates-box">
+                            <h2>oops c++ GreatLearning</h2>
+                            <a href="oops c++.png" class="btn started course">View</a>
+        
+                        </div>
+                        <div class="certificates-box">
+                            <h2>c++ with data structures</h2>
+                            <a href="si.png" class="btn started course">View</a>
+        
+                        </div>
+                        
+                    </section>
+                    <br><br><br><br>
+                    <section class="certificates">
+                        <div class="certificates-box">
+                            <h2>Fundamentals of cryptography-Infosys </h2>
+                            <a href="cs.png" class="btn started course">View</a>
+                        </div>
+        
+                        <div class="certificates-box">
+                            <h2>Fundamentals of cybersecurity-IBM</h2>
+                            <a href="cybersecurity.png" class="btn started course">View</a>
+        
+                        </div>
+                        <div class="certificates-box">
+                            <h2>Angular</h2>
+                            <a href="angular.png" class="btn started course">View</a>
+                        </div>
+                        <div class="certificates-box">
+                            <h2>Foundation Course</h2>
+                            <a href="techsaksham.png" class="btn started course">View</a>
+        
+                        </div>
+                        
+                    </section>
+                    
+                <!-- Certificates content goes here -->
+            </div>
+            
+            
+        </div>
+        
+    </section>
+        <footer class="footer" id = "contact">
+            <h2 class="contact-title">Contact Me</h2>
+            <div class="footer-left">
+                
+                <a href="mailto:gottipoornima1234@gmail.com" id="n"><p>gottipoornima1234@gmail.com</p></a>
+            </div>
+            <div class="footer-right">
+                <h3 id="n">Find Me On </h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/poornima-gottimukkala-a89753242/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>  
+            </div>
+            <p id = "n">&copy; 2023 Poornima Gottimukkala. All rights reserved.</p>
+        </footer>
+</body>
+</html>
